@@ -23,6 +23,27 @@
     </script>
 </head>
 <body class="bg-dark-900 text-gray-100 font-sans">
+
+    <!-- Splash Screen -->
+    <div id="splash-screen" class="fixed inset-0 z-[100] flex items-center justify-center bg-dark-900">
+        <div class="splash-content flex flex-col items-center">
+            <!-- Monogram -->
+            <div id="splash-logo" class="w-24 h-24 bg-gold-500 rounded-full flex items-center justify-center mb-6 splash-logo-anim">
+                <span class="text-dark-900 font-display font-bold text-4xl">DC</span>
+            </div>
+            <!-- İsim -->
+            <div class="overflow-hidden">
+                <p id="splash-name" class="font-display text-2xl text-gold-400 tracking-widest splash-name-anim">Av. Dilan Candan</p>
+            </div>
+            <!-- Alt çizgi -->
+            <div id="splash-line" class="h-px bg-gold-500 mt-4 splash-line-anim"></div>
+            <!-- Alt yazı -->
+            <div class="overflow-hidden mt-3">
+                <p id="splash-sub" class="text-gray-400 text-sm tracking-[0.3em] uppercase splash-sub-anim">Hukuk Bürosu</p>
+            </div>
+        </div>
+    </div>
+
     <!-- Scroll Progress Indicator -->
     <div id="scroll-progress" class="fixed top-0 left-0 h-1 bg-gold-500 z-[60] transition-all duration-300" style="width: 0%"></div>
 

@@ -1,3 +1,61 @@
+/* ===== SPLASH SCREEN ===== */
+#splash-screen {
+    transition: opacity 0.6s ease, visibility 0.6s ease;
+}
+
+#splash-screen.hide {
+    opacity: 0;
+    visibility: hidden;
+}
+
+/* Logo: scale up from 0 + fade in */
+.splash-logo-anim {
+    opacity: 0;
+    transform: scale(0.3);
+    animation: splashLogoIn 0.7s cubic-bezier(0.34, 1.56, 0.64, 1) 0.2s forwards;
+    box-shadow: 0 0 0 rgba(212, 175, 55, 0);
+}
+
+@keyframes splashLogoIn {
+    to {
+        opacity: 1;
+        transform: scale(1);
+        box-shadow: 0 0 40px rgba(212, 175, 55, 0.35);
+    }
+}
+
+/* İsim: slide up + fade in */
+.splash-name-anim {
+    opacity: 0;
+    transform: translateY(100%);
+    animation: splashSlideUp 0.6s cubic-bezier(0.4, 0, 0.2, 1) 0.75s forwards;
+}
+
+/* Çizgi: genişle */
+.splash-line-anim {
+    width: 0;
+    animation: splashLineGrow 0.5s ease 1.2s forwards;
+}
+
+@keyframes splashLineGrow {
+    to { width: 180px; }
+}
+
+/* Alt yazı: slide up + fade in */
+.splash-sub-anim {
+    opacity: 0;
+    transform: translateY(100%);
+    animation: splashSlideUp 0.5s cubic-bezier(0.4, 0, 0.2, 1) 1.4s forwards;
+}
+
+@keyframes splashSlideUp {
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* ===== GLASSMORPHISM ===== */
 /* Glassmorphism Effect */
 .glass-card {
     background: rgba(20, 20, 20, 0.25);

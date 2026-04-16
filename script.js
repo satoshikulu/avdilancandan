@@ -1,3 +1,12 @@
+// Splash Screen
+const splashScreen = document.getElementById('splash-screen');
+window.addEventListener('load', () => {
+    setTimeout(() => {
+        splashScreen.classList.add('hide');
+        setTimeout(() => splashScreen.remove(), 600);
+    }, 4000);
+});
+
 // Navbar Scroll Effect
 const navbar = document.getElementById('navbar');
 let lastScroll = 0;
